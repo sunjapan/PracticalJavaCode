@@ -1,0 +1,12 @@
+Method int top()
+   0 aload_0          //Push the object reference(this) at index
+                      //0 of the local variable table.
+   1 getfield #6 <Field int intArr[]>
+                      //Pop the object reference(this) and push
+                      //the object reference for intArr accessed
+                      //from the constant pool.
+   4 iconst_0         //Push 0.
+   5 iaload           //Pop the top two values and push the value
+                      //at index 0 of intArr.
+   6 ireturn          //Pop the top value and push it onto the
+                      //operand stack of the invoker.

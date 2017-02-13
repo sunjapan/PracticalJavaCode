@@ -1,0 +1,17 @@
+Method int useObject(java.lang.Integer)
+   0 iconst_5      //Push 5 on the stack.
+   1 istore_2      //Pop 5 and store it at index 2 of the local
+                   //variable table(i).
+   2 iload_2       //Push the value from index 2 of the local
+                   //variable table(i).
+   3 aload_1       //Push the object reference from index 1 of the
+                   //local variable table(increment).
+   4 invokevirtual #16 <Method int intValue()>
+                   //Pop the object reference and invoke its
+                   //intValue method. Push the result.
+   7 iadd          //Pop the two top values, push their sum.
+   8 istore_2      //Pop the sum and store it at index 2 of the
+                   //local variable table(i).
+   9 iload_2       //Push the value from index 2(i).
+  10 ireturn       //Pop the top value and push it on the operand
+                   //stack of the invoking method.

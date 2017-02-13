@@ -1,0 +1,27 @@
+Method void copyArray1(int[], int[])
+   0 aload_1          //Push the object reference at index 1 of
+                      //the local variable table(src).
+   1 arraylength      //Pop src and push its length.
+   2 istore_3         //Pop the length and store it at index 3 of
+                      //the local variable table(size).
+   3 iconst_0         //Push 0.
+   4 istore 4         //Pop 0 and store it at index 4 of the local
+                      //variable table(i).
+   6 goto 20          //Jump to location 20.
+   9 aload_2          //Push the object reference at index 2 of
+                      //the local variable table(dest).
+  10 iload 4          //Push the value at index 4(i).
+  12 aload_1          //Push the object reference at index 1 of
+                      //the local variable table(src).
+  13 iload 4          //Push the value at index 4(i).
+  15 iaload           //Pop i and src. Push the ith element of the
+                      //src array.
+  16 iastore          //Pop the top three values (ith element of
+                      //src, i, and dest). Store the ith element
+                      //or src at index i of dest.
+  17 iinc 4 1         //Increment i stored at index 4.
+  20 iload 4          //Push the value at index 4(i).
+  22 iload_3          //Push the value at index 3(size).
+  23 if_icmplt 9      //Pop i and size. Jump to location 9 if i is
+                      //less than size.
+  26 return           //Return to calling method.

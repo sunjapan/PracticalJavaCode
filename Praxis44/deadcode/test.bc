@@ -1,0 +1,97 @@
+Compiled from test.java
+class test extends java.lang.Object {
+    test();
+    public static void bar();
+    public static void foo();
+    public static void main(java.lang.String[]);
+}
+
+Method test()
+   0 aload_0
+   1 invokespecial #8 <Method java.lang.Object()>
+   4 return
+
+Method void bar()
+   0 bipush 10
+   2 newarray int
+   4 astore_0
+   5 iconst_0
+   6 istore_1
+   7 goto 17
+  10 aload_0
+  11 iload_1
+  12 iconst_0
+  13 iastore
+  14 iinc 1 1
+  17 iload_1
+  18 bipush 10
+  20 if_icmplt 10
+  23 return
+
+Method void foo()
+   0 iconst_5
+   1 istore_0
+   2 bipush 10
+   4 newarray int
+   6 astore_1
+   7 iconst_0
+   8 istore_2
+   9 goto 36
+  12 aload_1
+  13 iload_2
+  14 iload_0
+  15 iastore
+  16 iload_0
+  17 iconst_5
+  18 if_icmpne 28
+  21 aload_1
+  22 iload_2
+  23 iconst_0
+  24 iastore
+  25 goto 33
+  28 aload_1
+  29 iload_2
+  30 bipush 10
+  32 iastore
+  33 iinc 2 1
+  36 iload_2
+  37 bipush 10
+  39 if_icmplt 12
+  42 return
+
+Method void main(java.lang.String[])
+   0 invokestatic #14 <Method void gc()>
+   3 invokestatic #12 <Method long currentTimeMillis()>
+   6 lstore_1
+   7 invokestatic #13 <Method void foo()>
+  10 invokestatic #12 <Method long currentTimeMillis()>
+  13 lstore_3
+  14 getstatic #15 <Field java.io.PrintStream out>
+  17 new #5 <Class java.lang.StringBuffer>
+  20 dup
+  21 ldc #2 <String "foo is ">
+  23 invokespecial #9 <Method java.lang.StringBuffer(java.lang.String)>
+  26 lload_3
+  27 lload_1
+  28 lsub
+  29 invokevirtual #10 <Method java.lang.StringBuffer append(long)>
+  32 invokevirtual #17 <Method java.lang.String toString()>
+  35 invokevirtual #16 <Method void println(java.lang.String)>
+  38 invokestatic #14 <Method void gc()>
+  41 invokestatic #12 <Method long currentTimeMillis()>
+  44 lstore_1
+  45 invokestatic #11 <Method void bar()>
+  48 invokestatic #12 <Method long currentTimeMillis()>
+  51 lstore_3
+  52 getstatic #15 <Field java.io.PrintStream out>
+  55 new #5 <Class java.lang.StringBuffer>
+  58 dup
+  59 ldc #1 <String "bar is ">
+  61 invokespecial #9 <Method java.lang.StringBuffer(java.lang.String)>
+  64 lload_3
+  65 lload_1
+  66 lsub
+  67 invokevirtual #10 <Method java.lang.StringBuffer append(long)>
+  70 invokevirtual #17 <Method java.lang.String toString()>
+  73 invokevirtual #16 <Method void println(java.lang.String)>
+  76 return

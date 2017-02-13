@@ -1,0 +1,21 @@
+Method void instanceAccess(int)
+   0 iconst_0         //Push 0 onto the stack.
+   1 istore_2         //Pop 0 and store it at index 2 of the local
+                      //variable table(i).
+   2 goto 18          //Jump to location 18.
+   5 aload_0          //Push index 0(this).
+   6 dup              //Duplicate the top stack value and push it.
+   7 getfield #19 <Field int instVar>
+                      //Pop the object reference for this and push
+                      //the value for instVar.
+  10 iconst_1         //Push 1.
+  11 iadd             //Pop the top two values, push their sum.
+  12 putfield #19 <Field int instVar>
+                      //Pop the top two values and store the sum
+                      //in instVar.
+  15 iinc 2 1         //Increment i stored at index 2 by 1.
+  18 iload_2          //Push the value at index 2(i).
+  19 iload_1          //Push the value at index 1(val).
+  20 if_icmplt 5      //Pop i and val. Jump to location 5 if i is
+                      //less than val.
+  23 return           //Return to calling method.

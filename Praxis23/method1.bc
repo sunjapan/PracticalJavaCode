@@ -1,0 +1,31 @@
+Method void method1(int)
+   0 iload_1          //Push the value stored at index 1 of the
+                      //local variable table(size) on the stack.
+   1 newarray int     //Pop the size parameter and create a new
+                      //int array with size elements. Push the
+                      //newly created array reference(ia).
+   3 astore_2         //Pop the array reference(ia) and store it
+                      //at index 2 of the local variable table.
+   4 iconst_0         //Beginning of try block. Push 0 for the
+                      //initial value of the loop counter(i).
+   5 istore_3         //Pop 0(i) and store it at index 3 of the
+                      //local variable table.
+   6 goto 16          //Jump to location 16.
+   9 aload_2          //Push the object reference(ia) at index 2
+                      //of the local variable table.
+  10 iload_3          //Push the value at index 3(i).
+  11 iload_3          //Push the value at index 3(i).
+  12 iastore          //Pop the top three values. Store the value
+                      //of i at index i in the array(ia).
+  13 iinc 3 1         //Increment the loop counter(i) stored at
+                      //index 3 of the local variable table by 1.
+  16 iload_3          //Push the value at index 3(i).
+  17 iload_1          //Push the value at index 1(size).
+  18 if_icmplt 9      //Pop both the loop counter(i) and size.
+                      //Jump to location 9 if i is less than size.
+  21 goto 25          //End of try block. Jump to location 25.
+  24 pop              //Beginning of catch block.
+  25 return           //Return from method.
+Exception table:      //If a java.lang.Exception occurs between
+from  to  target type //location 4(inclusive) and location
+  4   21    24   <Class java.lang.Exception>

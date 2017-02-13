@@ -1,0 +1,24 @@
+ 0 iconst_5           //Push 5 on the stack.
+ 1 istore_1           //Pop 5 and store it at index 1 of the local
+                      //variable table(x).
+ 2 iload_0            //Push index 0(N).
+ 3 newarray int       //Pop N and create a new array of length N.
+                      //Push reference to this array(a).
+ 5 astore_2           //Pop a and store at index 2.
+ 6 iconst_0           //Push 0.
+ 7 istore_3           //Pop 0 and store at index 3(i).
+ 8 goto 21            //Jump to location 21.
+11 aload_2            //Push the object reference at index 2(a).
+12 iload_3            //Push the value at index 3(i).
+13 dup2               //Duplicate the top two stack values and
+                      //push them.
+14 iaload             //Pop i and a. Push the ith element of a.
+15 iload_1            //Push index 1(x).
+16 iadd               //Pop the top two values and push their sum.
+17 iastore            //Pop the top three values(sum, i, a). Store
+                      //sum at the ith element of a.
+18 iinc 3 1           //Increment i stored at index 3 by 1.
+21 iload_3            //Push index 3(i).
+22 iload_0            //Push index 0(N).
+23 if_icmplt 11       //Pop i and N. Jump to location 11 if i is
+                      //less than N.

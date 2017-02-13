@@ -1,0 +1,3 @@
+0 sipush 190          //Push 190.
+3 istore_1            //Pop 190 and store at index 1 of the local
+                      //variable table(c).

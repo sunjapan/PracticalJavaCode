@@ -1,0 +1,9 @@
+0 new #2 <Class java.lang.Object>
+                      //Create an object of type java.lang.Object
+                      //and push a reference to it(lock).
+3 dup                 //Duplicate the top stack value and push it.
+4 invokespecial #3 <Method java.lang.Object()>
+                      //Pop the object reference(lock), and invoke
+                      //its constructor.
+7 astore_1            //Pop the object reference(lock) and store
+                      //it at index 1 of the local variable table.

@@ -1,0 +1,23 @@
+Method java.lang.Integer useObject(int)
+   0 iconst_5      //Push 5 on the stack.
+   1 istore_2      //Pop 5 and store it at index 2 of the local
+                   //variable table(i).
+   2 iload_2       //Push the value from index 2 of the local
+                   //variable table(i).
+   3 iload_1       //Push the value from index 1 of the local
+                   //variable table(increment).
+   4 iadd          //Pop the two top values and push their sum.
+   5 istore_2      //Pop the sum and store it at index 2 of the
+                   //local variable table(i).
+   6 new #4 <Class java.lang.Integer>
+                   //Create an object of the Integer class and
+                   //push a reference to it.
+   9 dup           //Duplicate the top stack value and push it.
+  10 iload_2       //Push the value from index 2 of the local
+                   //variable table(i).
+  11 invokespecial #11 <Method java.lang.Integer(int)>
+                   //Pop the top two values and invoke the
+                   //constructor for the Integer class passing i.
+  14 areturn       //Pop the object reference for the Integer
+                   //object and push it on the operand stack of
+                   //the invoking method.

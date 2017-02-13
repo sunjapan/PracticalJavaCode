@@ -1,0 +1,6 @@
+0 iconst_0            //Push 0.
+1 newarray byte       //Pop 0 and create a new byte array with
+                      //size 0. Push the newly created array
+                      //reference(lock).
+3 astore_1            //Pop the array reference(lock) and store it
+                      //at index 1 of the local variable table.

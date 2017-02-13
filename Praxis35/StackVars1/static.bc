@@ -1,0 +1,19 @@
+Method void staticAccess(int)
+   0 iconst_0         //Push 0 onto the stack.
+   1 istore_2         //Pop 0 and store it at index 2 of the local
+                      //variable table(i).
+   2 goto 16          //Jump to location 16.
+   5 getstatic #25 <Field int staticVar>
+                      //Push the value from the constant pool for
+                      //staticVar.
+   8 iconst_1         //Push 1.
+   9 iadd             //Pop the top two values, push their sum.
+  10 putstatic #25 <Field int staticVar>
+                      //Pop the value for sum and store it in
+                      //staticVar.
+  13 iinc 2 1         //Increment i stored at index 2 by 1.
+  16 iload_2          //Push the value at index 2(i).
+  17 iload_1          //Push the value at index 1(val).
+  18 if_icmplt 5      //Pop i and val. Jump to location 5 if i is
+                      //less than val.
+  21 return           //Return to calling method.

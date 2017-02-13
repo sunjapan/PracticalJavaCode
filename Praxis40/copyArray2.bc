@@ -1,0 +1,18 @@
+Method void copyArray2(int[], int[])
+   0 aload_1          //Push the object reference at index 1 of
+                      //the local variable table(src).
+   1 arraylength      //Pop src and push its length.
+   2 istore_3         //Pop the length and store it at index 3 of
+                      //the local variable table(size).
+   3 aload_1          //Push the object reference at index 1 of
+                      //the local variable table(src).
+   4 iconst_0         //Push 0.
+   5 aload_2          //Push the object reference at index 2 of
+                      //the local variable table(dest).
+   6 iconst_0         //Push 0.
+   7 iload_3          //Push the value at index 3(size).
+   8 invokestatic #13 <Method void arraycopy(java.lang.Object,
+                      int, java.lang.Object, int, int)>
+                      //Pop the top five values and call the
+                      //arraycopy method.
+  11 return           //Return to calling method.

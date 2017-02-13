@@ -1,0 +1,34 @@
+Method void main(java.lang.String[])
+   0 bipush 10        //Push 10 on the stack.
+   2 istore_1         //Pop 10 and store it at index 1 of the
+                      //local variable table(a).
+   3 bipush 20        //Push 20 on the stack.
+   5 istore_2         //Pop 20 and store it at index 2 of the
+                      //local variable table(b).
+   6 bipush 10        //Push 10 for the size of the int array.
+   8 newarray int     //Pop 10 and create a new int array with 10
+                      //elements. Push the newly created array
+                      //reference(arr).
+  10 astore_3         //Pop the array reference(arr) and store it
+                      //at index 3 of the local variable table.
+  11 iconst_0         //Push 0 for the initial value of the loop
+                      //counter(i).
+  12 istore 4         //Pop 0(i) and store it at index 4 of the
+                      //local variable table.
+  14 goto 27          //Jump to location 27.
+  17 aload_3          //Push the object reference(arr) at index 3
+                      //of the local variable table.
+  18 iload 4          //Push the value at index 4(i).
+  20 iload_1          //Push the value at index 1(a==10).
+  21 iload_2          //Push the value at index 2(b==20).
+  22 iadd             //Pop the top two values (10 and 20), add
+                      //them, and push the result(30).
+  23 iastore          //Pop the top three values. Store 30 at
+                      //index i in the array(arr).
+  24 iinc 4 1         //Increment the loop counter(i) stored at
+                      //index 4 of the local variable table by 1.
+  27 iload 4          //Push the value at index 4(i).
+  29 bipush 10        //Push 10 (the loop terminator value).
+  31 if_icmplt 17     //Pop both i and 10. Jump to location 17 if
+                      //i is less than 10.
+  34 return           //Return from method.

@@ -1,0 +1,15 @@
+Method void bar()
+   0 return
+
+Method void foo()
+   0 return
+
+Method void main(java.lang.String[])
+   0 new #1 <Class Test>
+   3 dup
+   4 invokespecial #3 <Method Test()>
+   7 astore_1
+   8 invokestatic #6 <Method void foo()>
+  11 aload_1
+  12 invokevirtual #5 <Method void bar()>
+  15 return

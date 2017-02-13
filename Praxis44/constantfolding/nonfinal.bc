@@ -1,0 +1,7 @@
+ 0 getstatic #6 <Field int a>  //Push the value for a.
+ 3 getstatic #7 <Field int b>  //Push the value for b.
+ 6 iadd                        //Pop a and b, push their sum.
+ 7 bipush 100                  //Push 100.
+ 9 iadd                        //Pop sum and 100, push their sum.
+10 istore_1                    //Pop sum and store it at index 1
+                               //of the local variable table(c).

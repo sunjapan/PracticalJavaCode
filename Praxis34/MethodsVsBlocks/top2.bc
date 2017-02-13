@@ -1,0 +1,44 @@
+Method int top2()
+   0 aload_0          //Push the object reference(this) at index
+                      //0 of the local variable table.
+   1 astore_2         //Pop the object reference(this) and store
+                      //it at index 2 of the local variable table.
+   2 aload_2          //Push the object reference(this).
+   3 monitorenter     //Pop the object reference(this) and acquire
+                      //the object's monitor.
+   4 aload_0          //Beginning of the synchronized block. Push
+                      //the object reference(this) at index 0 of
+                      //the local variable table.
+   5 getfield #6 <Field int intArr[]>
+                      //Pop the object reference(this) and push
+                      //the object reference for intArr accessed
+                      //from the constant pool.
+   8 iconst_0         //Push 0.
+   9 iaload           //Pop the top two values and push the value
+                      //at index 0 of intArr.
+  10 istore_1         //Pop the value and store it at index 1 of
+                      //the local variable table.
+  11 jsr 19           //Push the address of the next opcode(14)
+                      //and jump to location 19.
+  14 iload_1          //Push the value at index 1 of the local
+                      //variable table.
+  15 ireturn          //Pop top value and push it on the operand
+                      //stack of the invoking method. Exit method.
+  16 aload_2          //End of the synchronized block. Push the
+                      //object reference(this) at index 2 of the
+                      //local variable table.
+  17 monitorexit      //Pop the object reference(this) and exit
+                      //the monitor.
+  18 athrow           //Pop the object reference(this) and throw
+                      //an exception.
+  19 astore_3         //Pop the return address(14) and store it at
+                      //index 3 of the local variable table.
+  20 aload_2          //Push the object reference(this) at index 2
+                      //of the local variable table.
+  21 monitorexit      //Pop the object reference(this) and exit
+                      //the monitor.
+  22 ret 3            //Return to the location indicated by index
+                      //3 of the local variable table(14).
+Exception table:      //If any exception occurs between
+from  to  target type //location 4 (inclusive) and location
+ 4    16    16   any  //16 (exclusive) jump to location 16.
